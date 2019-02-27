@@ -181,6 +181,8 @@ export default function makeExports(
         },
 
         css(...styleDefinitions /* : MaybeSheetDefinition[] */) {
+            console.log('STARTING INJECTION');
+            console.log(new Error().stack);
             return injectAndGetClassName(
                 useImportant, styleDefinitions, selectorHandlers);
         },
