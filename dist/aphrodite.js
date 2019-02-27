@@ -1534,7 +1534,7 @@ var staticData = {
     "gridRowGap": ms,
     "gridArea": ms,
     "gridGap": ms,
-    "textSizeAdjust": wms,
+    "textSizeAdjust": ["ms", "Webkit"],
     "borderImage": w,
     "borderImageOutset": w,
     "borderImageRepeat": w,
@@ -2357,6 +2357,9 @@ function makeExports(useImportant
     css: function css()
     /* : MaybeSheetDefinition[] */
     {
+      console.log('STARTING INJECTION');
+      console.log(new Error().stack);
+
       for (var _len = arguments.length, styleDefinitions = new Array(_len), _key = 0; _key < _len; _key++) {
         styleDefinitions[_key] = arguments[_key];
       }
